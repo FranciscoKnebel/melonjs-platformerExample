@@ -1,5 +1,7 @@
 melonJS boilerplate
 -------------------------------------------------------------------------------
+Example from http://melonjs.github.io/tutorial-platformer/
+
 
 features :
 - video autoscaling

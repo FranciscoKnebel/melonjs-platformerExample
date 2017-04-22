@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="2017.04.21" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="32" tileheight="32" nextobjectid="37">
+<map version="2017.04.21" orientation="orthogonal" renderorder="right-down" width="40" height="15" tilewidth="32" tileheight="32" nextobjectid="45">
  <tileset firstgid="1" source="../../../../../../media/fpk/WD/Documentos/boilerplate/data/map/map01_level_tileset.tsx"/>
  <imagelayer name="Image Layer 1">
   <image source="../../../../../../media/fpk/WD/Documentos/boilerplate/data/img/area01_bkg0.png" width="640" height="480"/>
@@ -24,18 +24,11 @@
   </data>
  </layer>
  <objectgroup name="Player">
-  <object id="15" name="mainPlayer" x="385" y="257" width="32" height="64">
+  <object id="15" name="mainPlayer" x="71" y="94" width="32" height="64">
    <properties>
     <property name="frameheight" type="int" value="0"/>
     <property name="framewidth" type="int" value="64"/>
     <property name="image" value="gripe_run_right"/>
-   </properties>
-  </object>
-  <object id="31" name="me.LevelEntity" x="1122" y="452" width="150" height="22">
-   <properties>
-    <property name="duration" type="int" value="250"/>
-    <property name="fade" value="#000000"/>
-    <property name="to" value="map2"/>
    </properties>
   </object>
  </objectgroup>
@@ -83,7 +76,7 @@
     <property name="image" value="wheelie_right"/>
    </properties>
   </object>
-  <object id="35" name="EnemyEntity" x="630.5" y="132" width="112" height="84">
+  <object id="35" name="EnemyEntity" x="395.5" y="232" width="436" height="84">
    <properties>
     <property name="image" value="wheelie_right"/>
    </properties>
@@ -93,8 +86,17 @@
   <object id="7" x="387" y="326" width="444" height="62"/>
   <object id="11" x="817" y="357" width="301" height="30"/>
   <object id="12" x="218" y="354" width="185" height="31"/>
-  <object id="14" x="2" y="167" width="222" height="30"/>
+  <object id="14" x="-18" y="169" width="240" height="30"/>
   <object id="16" x="190" y="190" width="34" height="196"/>
   <object id="18" x="1083" y="372" width="34" height="101"/>
+  <object id="37" name="me.LevelEntity" x="1099" y="369.5" width="180" height="102">
+   <properties>
+    <property name="duration" type="int" value="250"/>
+    <property name="fade" value="#000000"/>
+    <property name="to" value="map2"/>
+   </properties>
+  </object>
+  <object id="41" x="1122" y="448" width="153" height="26"/>
+  <object id="43" x="-5" y="-1" width="10" height="175"/>
  </objectgroup>
 </map>

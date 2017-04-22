@@ -87,8 +87,8 @@ game.PlayerEntity = me.Entity.extend({
             // if yes reset the game
 
             me.game.world.removeChild(this);
+            me.audio.play("die", false);
             me.game.viewport.fadeIn("#fff", 500, function(){
-                // me.audio.play("die", false);
                 me.levelDirector.reloadLevel();
                 game.data.score = 0;
                 me.game.viewport.fadeOut("#fff", 150);
@@ -146,7 +146,22 @@ game.PlayerEntity = me.Entity.extend({
           }
           else if (!this.body.jumping){
             // let's flicker in case we touched an enemy
-            this.renderable.flicker(750);
+            if(game.data.score > 0) {
+              this.renderable.flicker(750);
+              game.data.score = 0;
+              me.audio.play("lost", false);
+
+              return true;
+            } else if(!this.renderable.isFlickering()){
+              me.game.world.removeChild(this);
+              me.audio.play("die", false);
+              me.game.viewport.fadeIn("#fff", 500, function(){
+                  me.levelDirector.reloadLevel();
+                  game.data.score = 0;
+                  me.game.viewport.fadeOut("#fff", 150);
+              });
+              return true;
+            }
           }
 
           // Fall through
